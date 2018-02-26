@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="AR_Physics.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920" 
+             Background="#FFF8E3">
+    <Grid>
+        <k:KinectUserViewer Width="300" k:KinectRegion.KinectRegion="{Binding ElementName=kinectRegion}" Height="225" HorizontalAlignment="Center" VerticalAlignment="Top" DefaultUserColor="#80D0DBD7" PrimaryUserColor="#FFD0DBD7" />
+        <k:KinectRegion Name="kinectRegion">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="160" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <k:KinectTileButton Grid.Column="0" Height="400" HorizontalAlignment="Center" Name="buttonSandbox" VerticalAlignment="Center" Width="450" Background="#FFD0DBD7" Content="Sandbox" FontSize="56" />
+                <k:KinectTileButton Grid.Column="1" Height="400" HorizontalAlignment="Center" Name="buttonHowMade" VerticalAlignment="Center" Width="450" Background="#FFD0DBD7" Content="Come è fatto" FontSize="56" />
+                <k:KinectTileButton Grid.Row="1" Grid.ColumnSpan="2" Background="#FFD0DBD7" Height="110" Width="200" Name="planeSwitch" VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <TextBlock Name="planeText" Text="Modalità tavolo" TextWrapping="Wrap" TextAlignment="Center" />
+                </k:KinectTileButton>
+            </Grid>
+        </k:KinectRegion>
+    </Grid>
+</UserControl>

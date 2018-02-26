@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="AR_Physics.HowMadeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:k="http://schemas.microsoft.com/kinect/2013" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1012" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Black" Grid.RowSpan="2"/>
+        <Grid Grid.Column="2" Grid.RowSpan="2" Background="Black"/>
+        <Grid Grid.Row="1" Background="Black" Grid.ColumnSpan="3" Margin="0"/>
+        <Grid Margin="5" Background="#FFEDC951" Name="leftPage" Loaded="Button_Loaded" MouseDown="Button_MouseDown" MouseUp="Button_MouseUp">
+            <TextBlock Text="&lt;" Foreground="#FF6A4A3C" FontSize="200" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <Grid Margin="5" Grid.Column="2" Background="#FFEDC951" Name="rightPage" Loaded="Button_Loaded" MouseDown="Button_MouseDown" MouseUp="Button_MouseUp">
+            <TextBlock Text=">" Foreground="#FF6A4A3C" FontSize="200" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <!--<k:KinectTileButton Background="#FFEDC951" BorderBrush="White" Content="&lt;" FontSize="200" Foreground="#FF6A4A3C" Height="Auto" HorizontalAlignment="Stretch" Name="leftPage" VerticalAlignment="Stretch" Width="Auto" />
+        <k:KinectTileButton Background="#FFEDC951" BorderBrush="White" Content=">" Foreground="#FF6A4A3C" Height="Auto" HorizontalAlignment="Stretch" Name="rightPage" VerticalAlignment="Stretch" Width="Auto" FontSize="200" />-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Background="#FFEDC951"  Foreground="#FF6A4A3C" Height="Auto" HorizontalAlignment="Stretch"  Name="description" VerticalAlignment="Stretch" Width="Auto" FontSize="50" 
+                   Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque " TextAlignment="Center" TextWrapping="Wrap" Margin="5"/>
+    </Grid>
+</UserControl>
