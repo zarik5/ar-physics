@@ -1,0 +1,26 @@
+﻿<Window x:Class="ArPhysics2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:k="http://schemas.microsoft.com/kinect/2014" 
+        xmlns:local="clr-namespace:ArPhysics2"
+        mc:Ignorable="d"
+        Height="921" Width="1320"
+        WindowStyle="None"
+        WindowState="Maximized" KeyDown="Window_KeyDown" Background="Black" Closing="Window_Closing" SizeChanged="Window_SizeChanged">
+    <!---->
+    <Grid>
+        <local:GraphicsControl x:Name="graphics" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480" Height="358"/>
+        <Viewbox x:Name="windowContent">
+            <Grid x:Name="viewBoxContent" Height="576" Width="768">
+                <local:GameView x:Name="gameView" Margin="0" Visibility="Hidden"/>
+                <local:HowItWorksView x:Name="howItWorksView" Margin="0" Visibility="Hidden"/>
+                <local:MenuScreen x:Name="menu" Margin="0"/>
+                <Grid x:Name="message" VerticalAlignment="Bottom" Height="150" Background="{StaticResource HudBackground}" Visibility="Hidden">
+                    <TextBlock Style="{StaticResource HeaderStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="36">Lorem ipsum dolor</TextBlock>
+                </Grid>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
